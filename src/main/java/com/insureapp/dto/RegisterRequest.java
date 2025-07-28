@@ -1,4 +1,4 @@
-package com.insureapp.entity;
+package com.insureapp.dto;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -7,15 +7,16 @@ import java.util.Set;
 
 import org.hibernate.annotations.ManyToAny;
 
+import com.insureapp.entity.Role;
+import com.insureapp.entity.User;
+
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
-import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -26,23 +27,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
-@Table(name="users")
+
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class User {
+public class RegisterRequest {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	
+	
 	
 	@NotBlank(message="fullname cannot be blank")
 	private String fullname;
 	
-	@Column(nullable=false,unique=true)
+	
 	@Email(message = "invalid email format")
 	@NotBlank(message="email cannot be blank")
 	private String email;
@@ -63,23 +62,15 @@ public class User {
 	@Column(length = 300)
 	private String address;
 	
-	@Column(nullable = false)
-	private Boolean isActive=true;
 	
-	@Column(nullable = false)
-	private LocalDateTime createdat=LocalDateTime.now();
 	
-	@ManyToAny(fetch = FetchType.EAGER)
-	@JoinTable(
-		name="user_roles",
-		joinColumns = @JoinColumn(name="user_id"),
-		inverseJoinColumns=@JoinColumn(name="role_id")
-			)
-	private Set<Role> roles=new HashSet<>();
+	@NotBlank
+	private String role;
 	
 	
 	
 	
 	
+
 
 }
