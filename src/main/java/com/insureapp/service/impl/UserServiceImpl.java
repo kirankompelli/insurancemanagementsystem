@@ -1,8 +1,11 @@
 package com.insureapp.service.impl;
 
+
+
 import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.insureapp.dto.LoginRequest;
 import com.insureapp.dto.LoginResponse;
@@ -13,6 +16,7 @@ import com.insureapp.repository.RoleRepository;
 import com.insureapp.repository.UserRepository;
 import com.insureapp.service.UserService;
 
+@Service
 public class UserServiceImpl  implements UserService{
 	
 	@Autowired
@@ -26,7 +30,9 @@ public class UserServiceImpl  implements UserService{
 		if(userrepo.existsByEmail(request.getEmail())) {
 			throw new RuntimeException("Email already exists");
 		}
-		Role role=rolerepo.findByName(request.getRole()).orElseThrow(()-> new RuntimeException("Invalid Role "+request.getRole()));
+		Role defaultRole = rolerepo.findByName("ROLE_CUSTOMER")
+			    .orElseThrow(() -> new RuntimeException("Default role not found"));
+
 		User user = User.builder()
                 .fullname(request.getFullname())
                 .email(request.getEmail())
@@ -35,7 +41,7 @@ public class UserServiceImpl  implements UserService{
                 .gender(request.getGender())
                 .address(request.getAddress())
                 .isActive(true)
-                .roles(Collections.singleton(role))
+                .roles(Collections.singleton(defaultRole))
                 .build();
 		return userrepo.save(user).toString();
 
