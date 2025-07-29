@@ -5,6 +5,13 @@ package com.insureapp.service.impl;
 import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.insureapp.dto.LoginRequest;
@@ -15,8 +22,12 @@ import com.insureapp.entity.User;
 import com.insureapp.repository.RoleRepository;
 import com.insureapp.repository.UserRepository;
 import com.insureapp.service.UserService;
+import com.insureapp.utils.JwtUtil;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl  implements UserService{
 	
 	@Autowired
@@ -24,6 +35,15 @@ public class UserServiceImpl  implements UserService{
 	
 	@Autowired
 	private UserRepository userrepo;
+	
+	@Autowired
+	private AuthenticationManager authenticationmanager;
+	
+	@Autowired
+	private JwtUtil jwtUtil;
+	
+	@Autowired
+	private PasswordEncoder passwordencoder;
 
 	@Override
 	public String registerUser(RegisterRequest request) {
@@ -36,7 +56,7 @@ public class UserServiceImpl  implements UserService{
 		User user = User.builder()
                 .fullname(request.getFullname())
                 .email(request.getEmail())
-                .password(request.getPassword())
+                .password(passwordencoder.encode(request.getPassword()))
                 .mobileNumber(request.getMobileNumber())
                 .gender(request.getGender())
                 .address(request.getAddress())
@@ -52,9 +72,27 @@ public class UserServiceImpl  implements UserService{
 	}
 
 	@Override
-	public LoginResponse login(LoginRequest reuqest) {
-		// TODO Auto-generated method stub
-		return null;
+	public ResponseEntity<LoginResponse> login(LoginRequest request) {
+		try {
+		    Authentication   authentication=authenticationmanager.authenticate(
+		       new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+		    UserDetails userdetails =(UserDetails)authentication.getPrincipal();
+		    
+		    User user=userrepo.findByEmail(request.getEmail()).orElseThrow(()-> new RuntimeException("user not found"));
+		    
+		    String token=jwtUtil.generateToken((UserDetails)authentication.getPrincipal());
+		    
+		    String role=user.getRoles().stream().findFirst()
+		    		.map(Role::getName).orElse("Unkown");
+		    
+		    return ResponseEntity.ok(LoginResponse.builder().token(token).message(role).build());
+		   
+		}
+		catch(BadCredentialsException exception) {
+			return ResponseEntity.badRequest().body(new LoginResponse(null, "Invalid Credentials"));
+		}
+		                   
+		
 	}
 
 }

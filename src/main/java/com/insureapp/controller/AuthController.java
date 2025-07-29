@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.insureapp.dto.LoginRequest;
+import com.insureapp.dto.LoginResponse;
 import com.insureapp.dto.RegisterRequest;
 import com.insureapp.service.UserService;
 
@@ -23,6 +25,14 @@ public class AuthController {
 	public ResponseEntity<String> register(@Valid @RequestBody RegisterRequest request ){
 		           service.registerUser(request);
 		           return ResponseEntity.ok("User registration sucessful");
+	}
+	
+	
+	@PostMapping("/login")
+	public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest loginrequest){
+		 return           service.login(loginrequest);
+		
+		
 	}
 
 }
