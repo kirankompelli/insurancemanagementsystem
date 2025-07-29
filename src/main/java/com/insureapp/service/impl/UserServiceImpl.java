@@ -14,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.insureapp.dto.AdminRegisterRequest;
 import com.insureapp.dto.LoginRequest;
 import com.insureapp.dto.LoginResponse;
 import com.insureapp.dto.RegisterRequest;
@@ -93,6 +94,32 @@ public class UserServiceImpl  implements UserService{
 		}
 		                   
 		
+	}
+
+	@Override
+	public String registerAdminOrAgent(AdminRegisterRequest request) {
+		if (userrepo.existsByEmail(request.getEmail())) {
+            throw new RuntimeException("Email already exists");
+        }
+
+        // Fetch role from DB
+        Role role = rolerepo.findByName(request.getRole())
+                .orElseThrow(() -> new RuntimeException("Role not found: " + request.getRole()));
+
+        // Build and save user
+        User user = User.builder()
+                .fullname(request.getFullname())
+                .email(request.getEmail())
+                .password(passwordencoder.encode(request.getPassword()))
+                .mobileNumber(request.getMobileNumber())
+                .gender(request.getGender())
+                .address(request.getAddress())
+                .isActive(true)
+                .roles(Collections.singleton(role))
+                .build();
+
+        userrepo.save(user);
+        return "User registered successfully with role: " + request.getRole();
 	}
 
 }

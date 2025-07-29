@@ -35,11 +35,11 @@ public class User {
     private String email;
 
     @NotBlank(message = "password cannot be blank")
-    @Size(min = 8, message = "Password must be at least 8 characters long")
+    @Size(min = 6, message = "Password must be at least 6 characters long")
     @Pattern(
-    		 regexp = "^[A-Za-z\\d@$!%*#?&]{6,}$",
-    		    message = "Password must be at least 6 characters"
-    )
+    	    regexp = "^(?=.*[A-Za-z])(?=.*\\d).{6,}$",
+    	    message = "Password must be at least 6 characters and contain at least one letter and one number"
+    	)
     private String password;
 
     @Pattern(regexp = "\\d{10}", message = "Mobile number must be 10 digits")
