@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.insureapp.entity.User;
 import com.insureapp.repository.UserRepository;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
@@ -22,6 +27,15 @@ public class UserController {
 	
 	@GetMapping("/me")
 	@PreAuthorize("hasRole('ADMIN,AGENT,CUSTOMER')")
+	@Operation(
+			summary="Get User Profile",
+			description = "Return the details of currently logged user"
+	)
+	@SecurityRequirement(name="Bearer-token")
+	@ApiResponses(value= {
+			@ApiResponse(responseCode="200",description = "User Profile retrived Successfully")
+			
+	})
 	public ResponseEntity<User> getLoggedInUser(Authentication authentication){
 		           String email= authentication.getName();
 		       User user=    userrepo.findByEmail(email)
