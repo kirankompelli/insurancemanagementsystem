@@ -30,9 +30,10 @@ public class SecurityConfig {
         return http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll()  // public
+                        .requestMatchers("/api/auth/login").permitAll()  // public
                         .requestMatchers("/actuator/**").permitAll()  // health check
                         .requestMatchers("/swagger-ui.html", "/v3/api-docs/**", "/swagger-ui/**").permitAll() // swagger api documentation
+                        .requestMatchers("/api/auth/register-customer").hasRole("AGENT")
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         .requestMatchers("/api/agent/**").hasRole("AGENT")
                         .requestMatchers("/api/customer/**").hasRole("CUSTOMER")

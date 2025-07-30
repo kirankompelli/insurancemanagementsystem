@@ -2,6 +2,7 @@ package com.insureapp.service.impl;
 
 
 
+import java.time.LocalDateTime;
 import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,8 +47,8 @@ public class UserServiceImpl  implements UserService{
 	@Autowired
 	private PasswordEncoder passwordencoder;
 
-	@Override
-	public String registerUser(RegisterRequest request) {
+	
+	public String registerUser(RegisterRequest request,CustomerUserDetails agent) {
 		if(userrepo.existsByEmail(request.getEmail())) {
 			throw new RuntimeException("Email already exists");
 		}
@@ -62,6 +63,7 @@ public class UserServiceImpl  implements UserService{
                 .gender(request.getGender())
                 .address(request.getAddress())
                 .isActive(true)
+                 .agent(userrepo.findById(agent.getUserId()).get())
                 .roles(Collections.singleton(defaultRole))
                 .build();
 		return userrepo.save(user).toString();

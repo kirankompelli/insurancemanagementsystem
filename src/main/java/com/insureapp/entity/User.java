@@ -2,14 +2,29 @@ package com.insureapp.entity;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,6 +35,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
+@Builder
 public class User {
 
     @Id
@@ -53,8 +69,9 @@ public class User {
     @Column(nullable = false)
     private Boolean isActive = true;
 
+    @CreationTimestamp
     @Column(nullable = false)
-    private LocalDateTime createdat = LocalDateTime.now();
+    private LocalDateTime createdat ;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
@@ -64,66 +81,10 @@ public class User {
     )
     private Set<Role> roles = new HashSet<>();
 
-    // 🔨 Manual Builder Class
-    public static class Builder {
-        private final User user = new User();
+    @ManyToOne
+    @JoinColumn(name = "agent_id")
+    private User agent;
 
-        public Builder id(long id) {
-            user.setId(id);
-            return this;
-        }
-
-        public Builder fullname(String fullname) {
-            user.setFullname(fullname);
-            return this;
-        }
-
-        public Builder email(String email) {
-            user.setEmail(email);
-            return this;
-        }
-
-        public Builder password(String password) {
-            user.setPassword(password);
-            return this;
-        }
-
-        public Builder mobileNumber(String mobileNumber) {
-            user.setMobileNumber(mobileNumber);
-            return this;
-        }
-
-        public Builder gender(String gender) {
-            user.setGender(gender);
-            return this;
-        }
-
-        public Builder address(String address) {
-            user.setAddress(address);
-            return this;
-        }
-
-        public Builder isActive(Boolean isActive) {
-            user.setIsActive(isActive);
-            return this;
-        }
-
-        public Builder createdAt(LocalDateTime createdAt) {
-            user.setCreatedat(createdAt);
-            return this;
-        }
-
-        public Builder roles(Set<Role> roles) {
-            user.setRoles(roles);
-            return this;
-        }
-
-        public User build() {
-            return user;
-        }
-    }
-
-    public static Builder builder() {
-        return new Builder();
-    }
+    @OneToMany(mappedBy = "agent")
+    private List<User> customers;
 }
