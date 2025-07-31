@@ -19,7 +19,9 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 @RequestMapping("api/auth")
 public class AuthController {
@@ -53,6 +55,8 @@ public class AuthController {
 			@ApiResponse(responseCode = "401",description="Invalid email or password")
 	})
 	public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest loginrequest){
+		
+		 log.info("Login attempt for email: {}", loginrequest.getEmail());
 		 return           service.login(loginrequest);
 		
 		

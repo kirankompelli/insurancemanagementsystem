@@ -1,5 +1,7 @@
 package com.insureapp.service.impl;
 
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,9 +15,11 @@ import com.insureapp.repository.PolicyRepository;
 import com.insureapp.service.PolicyService;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class PolicyServiceImpl implements PolicyService{
 	
 	
@@ -23,6 +27,7 @@ public class PolicyServiceImpl implements PolicyService{
 	private PolicyRepository policyrepo;
     
 	public PolicyResponse createPolicy(PolicyRequest request) {
+		 log.info("🔍 Creating a new policy using PolicyRequest Data {}", request.getPolicyname());
 		 Policy policy = Policy.builder()
 	                .policyname(request.getPolicyname())
 	                .description(request.getDescription())
@@ -50,6 +55,7 @@ public class PolicyServiceImpl implements PolicyService{
 	}
 
 	public List<PolicyResponse> getAllPolicies() {
+		 log.info("🔍 Retrieving All policies {}");
 		 List<Policy> policies = policyrepo.findAll();
 		    List<PolicyResponse> responses = new ArrayList<>();
 
@@ -74,7 +80,17 @@ public class PolicyServiceImpl implements PolicyService{
 
 	@Override
 	public PolicyResponse getPolicyById(Long id) {
-		Policy policy=policyrepo.findById(id).orElseThrow(()->new RuntimeException("Policy not found with id " + id));
+		
+		 log.info("🔍 Retrieving policy with ID: {}", id);
+		
+		 Policy policy = policyrepo.findById(id)
+	                .orElseThrow(() -> {
+	                    log.warn("❌ Policy not found with ID: {}", id);
+	                    return new RuntimeException("Policy not found with ID: " + id);
+	                });
+		
+		 log.debug("✅ Found policy: {}", policy);
+		
 		return PolicyResponse.builder().coverageamount(policy.getCoverageamount())
 				.createdat(policy.getCreatedAt())
 				.description(policy.getDescription())
@@ -89,6 +105,7 @@ public class PolicyServiceImpl implements PolicyService{
 
 	@Override
 	public PolicyResponse updatePolicy(long id, PolicyRequest request) {
+		 log.info("🔍 updating policy with ID: {}", id);
 		       Policy policy=   policyrepo.findById(id).orElseThrow(()->new RuntimeException("Policy not Found with id"+id));
 		       policy.setPolicyname(request.getPolicyname());
 		       policy.setDescription(request.getDescription());
@@ -99,6 +116,7 @@ public class PolicyServiceImpl implements PolicyService{
 		       policy.setEndDate(request.getEnddate());
 
 		       policyrepo.save(policy);
+		   log.info("🔍 Updated policy with ID: {}", id);
 		       
 		       return PolicyResponse.builder().coverageamount(policy.getCoverageamount())
 						.createdat(policy.getCreatedAt())
@@ -115,8 +133,10 @@ public class PolicyServiceImpl implements PolicyService{
 
 	@Override
 	public String deletePolicy(long id) {
+		 log.info("🔍 deleting policy with ID: {}", id);
 		           Policy policy=  policyrepo.findById(id).orElseThrow(()-> new RuntimeException("Policy not Found with id"+id));
 		  policyrepo.delete(policy);
+		  log.info("🔍 deleted policy with ID: {}", id); 
 		  return "Policy Deleted sucesfully";
 	}
 	

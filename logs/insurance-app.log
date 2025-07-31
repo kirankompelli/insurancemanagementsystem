@@ -1,0 +1,370 @@
+2025-07-31T11:56:29.130+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Starting InsuranceManagementProjectApplication using Java 23.0.2 with PID 12104 (C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject\target\classes started by kompe in C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject)
+2025-07-31T11:56:29.131+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-31T11:56:29.816+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-31T11:56:29.851+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2025-07-31T11:56:30.178+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-31T11:56:30.180+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-31T11:56:30.180+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-31T11:56:30.220+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-31T11:56:30.225+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1080 ms
+2025-07-31T11:56:30.401+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-31T11:56:30.407+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-31T11:56:30.423+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-31T11:56:30.426+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-07-31T11:56:30.446+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6faaff32
+2025-07-31T11:56:30.447+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-07-31T11:56:30.448+05:30  WARN 12104 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31T11:56:30.449+05:30  WARN 12104 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-31T11:56:30.449+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-31T11:56:30.597+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-31T11:56:30.633+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T11:56:30.909+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-07-31T11:56:30.910+05:30  WARN 12104 --- [InsuranceManagementProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-07-31T11:56:31.050+05:30  WARN 12104 --- [InsuranceManagementProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31T11:56:31.436+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-31T11:56:31.965+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-31T11:56:32.030+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-31T11:56:32.042+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Started InsuranceManagementProjectApplication in 2.979 seconds (process running for 302.89)
+2025-07-31T11:56:32.049+05:30  INFO 12104 --- [InsuranceManagementProject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   LogFileWebEndpointAutoConfiguration#logFileWebEndpoint matched:
+      - Log File found logging.file.name logs/insurance-app.log (LogFileWebEndpointAutoConfiguration.LogFileCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.logging.LogFileWebEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-07-31T11:57:56.787+05:30  INFO 12104 --- [InsuranceManagementProject] [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-31T11:57:56.789+05:30  INFO 12104 --- [InsuranceManagementProject] [RMI TCP Connection(12)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31T11:57:56.796+05:30  INFO 12104 --- [InsuranceManagementProject] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-31T11:57:56.802+05:30  INFO 12104 --- [InsuranceManagementProject] [RMI TCP Connection(12)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T11:57:56.804+05:30  INFO 12104 --- [InsuranceManagementProject] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-07-31T11:57:56.815+05:30  INFO 12104 --- [InsuranceManagementProject] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-07-31T11:58:02.259+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Starting InsuranceManagementProjectApplication using Java 23.0.2 with PID 25128 (C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject\target\classes started by kompe in C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject)
+2025-07-31T11:58:02.262+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-31T11:58:02.368+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-31T11:58:02.368+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-31T11:58:04.384+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-31T11:58:04.505+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 3 JPA repository interfaces.
+2025-07-31T11:58:05.693+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-31T11:58:05.720+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-31T11:58:05.722+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-31T11:58:05.819+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-31T11:58:05.820+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3451 ms
+2025-07-31T11:58:06.363+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-31T11:58:06.448+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-31T11:58:06.501+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-31T11:58:06.953+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-31T11:58:07.003+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-31T11:58:07.592+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@919c138
+2025-07-31T11:58:07.595+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-31T11:58:07.670+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31T11:58:07.671+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-31T11:58:07.705+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-31T11:58:09.022+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-31T11:58:09.133+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T11:58:09.771+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-07-31T11:58:09.771+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-07-31T11:58:09.993+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31T11:58:10.637+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-31T11:58:11.354+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-31T11:58:11.505+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-31T11:58:11.525+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Started InsuranceManagementProjectApplication in 10.026 seconds (process running for 11.343)
+2025-07-31T11:58:12.079+05:30  INFO 25128 --- [InsuranceManagementProject] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31T11:58:12.080+05:30  INFO 25128 --- [InsuranceManagementProject] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-31T11:58:12.083+05:30  INFO 25128 --- [InsuranceManagementProject] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-31T11:58:17.867+05:30  INFO 25128 --- [InsuranceManagementProject] [http-nio-8080-exec-2] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [PolicyController#getPolicyById] with args: [1]
+2025-07-31T11:58:17.868+05:30  INFO 25128 --- [InsuranceManagementProject] [http-nio-8080-exec-2] c.i.service.impl.PolicyServiceImpl       : 🔍 Retrieving policy with ID: 1
+2025-07-31T11:58:17.918+05:30  INFO 25128 --- [InsuranceManagementProject] [http-nio-8080-exec-2] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [PolicyController#getPolicyById]; execution time: 52 ms
+2025-07-31T11:59:29.529+05:30  INFO 25128 --- [InsuranceManagementProject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-31T11:59:29.538+05:30  INFO 25128 --- [InsuranceManagementProject] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31T11:59:29.548+05:30  INFO 25128 --- [InsuranceManagementProject] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-31T11:59:29.561+05:30  INFO 25128 --- [InsuranceManagementProject] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T11:59:29.568+05:30  INFO 25128 --- [InsuranceManagementProject] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-31T11:59:29.592+05:30  INFO 25128 --- [InsuranceManagementProject] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-31T11:59:29.763+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Starting InsuranceManagementProjectApplication using Java 23.0.2 with PID 25128 (C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject\target\classes started by kompe in C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject)
+2025-07-31T11:59:29.764+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-31T11:59:30.571+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-31T11:59:30.608+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2025-07-31T11:59:30.940+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-31T11:59:30.942+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-31T11:59:30.943+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-31T11:59:30.997+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-31T11:59:30.998+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1228 ms
+2025-07-31T11:59:31.220+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-31T11:59:31.225+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-31T11:59:31.243+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-31T11:59:31.245+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-07-31T11:59:31.273+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@620485e8
+2025-07-31T11:59:31.274+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-07-31T11:59:31.275+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31T11:59:31.275+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-31T11:59:31.277+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-31T11:59:31.497+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-31T11:59:31.538+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T11:59:31.832+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-07-31T11:59:31.833+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-07-31T11:59:31.986+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31T11:59:32.367+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-31T11:59:32.880+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-31T11:59:32.941+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-31T11:59:32.951+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Started InsuranceManagementProjectApplication in 3.248 seconds (process running for 92.769)
+2025-07-31T11:59:32.955+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-31T12:00:39.837+05:30  INFO 25128 --- [InsuranceManagementProject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 1 deletion, 3 modifications)
+2025-07-31T12:00:39.841+05:30  INFO 25128 --- [InsuranceManagementProject] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31T12:00:39.849+05:30  INFO 25128 --- [InsuranceManagementProject] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-31T12:00:39.856+05:30  INFO 25128 --- [InsuranceManagementProject] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T12:00:39.857+05:30  INFO 25128 --- [InsuranceManagementProject] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-07-31T12:00:39.873+05:30  INFO 25128 --- [InsuranceManagementProject] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-07-31T12:00:40.051+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Starting InsuranceManagementProjectApplication using Java 23.0.2 with PID 25128 (C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject\target\classes started by kompe in C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject)
+2025-07-31T12:00:40.053+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-31T12:00:40.872+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-31T12:00:40.916+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
+2025-07-31T12:00:41.169+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-31T12:00:41.170+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-31T12:00:41.171+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-31T12:00:41.219+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-31T12:00:41.219+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1162 ms
+2025-07-31T12:00:41.403+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-31T12:00:41.409+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-31T12:00:41.427+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-31T12:00:41.429+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-07-31T12:00:41.453+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d86a73
+2025-07-31T12:00:41.453+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-07-31T12:00:41.454+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31T12:00:41.454+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-31T12:00:41.456+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-31T12:00:41.603+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-31T12:00:41.636+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T12:00:41.908+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-07-31T12:00:41.909+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-07-31T12:00:42.040+05:30  WARN 25128 --- [InsuranceManagementProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31T12:00:42.379+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-31T12:00:42.817+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-31T12:00:42.882+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-31T12:00:42.892+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Started InsuranceManagementProjectApplication in 2.898 seconds (process running for 162.71)
+2025-07-31T12:00:42.895+05:30  INFO 25128 --- [InsuranceManagementProject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-31T12:00:47.821+05:30  INFO 25128 --- [InsuranceManagementProject] [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-31T12:00:47.822+05:30  INFO 25128 --- [InsuranceManagementProject] [RMI TCP Connection(7)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31T12:00:47.833+05:30  INFO 25128 --- [InsuranceManagementProject] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-31T12:00:47.839+05:30  INFO 25128 --- [InsuranceManagementProject] [RMI TCP Connection(7)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T12:00:47.841+05:30  INFO 25128 --- [InsuranceManagementProject] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-07-31T12:00:47.870+05:30  INFO 25128 --- [InsuranceManagementProject] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-07-31T12:01:08.170+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Starting InsuranceManagementProjectApplication using Java 23.0.2 with PID 11824 (C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject\target\classes started by kompe in C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject)
+2025-07-31T12:01:08.174+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-31T12:01:08.275+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-31T12:01:08.276+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-31T12:01:10.454+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-31T12:01:10.579+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 3 JPA repository interfaces.
+2025-07-31T12:01:11.785+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-31T12:01:11.812+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-31T12:01:11.813+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-31T12:01:11.928+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-31T12:01:11.929+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3652 ms
+2025-07-31T12:01:12.371+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-31T12:01:12.487+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-31T12:01:12.540+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-31T12:01:13.108+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-31T12:01:13.156+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-31T12:01:13.757+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e69efb4
+2025-07-31T12:01:13.763+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-31T12:01:13.843+05:30  WARN 11824 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31T12:01:13.845+05:30  WARN 11824 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-31T12:01:13.875+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-31T12:01:15.286+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-31T12:01:15.393+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T12:01:16.033+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-07-31T12:01:16.034+05:30  WARN 11824 --- [InsuranceManagementProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-07-31T12:01:16.253+05:30  WARN 11824 --- [InsuranceManagementProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31T12:01:16.880+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-31T12:01:17.593+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-31T12:01:17.717+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-31T12:01:17.737+05:30  INFO 11824 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Started InsuranceManagementProjectApplication in 10.361 seconds (process running for 11.682)
+2025-07-31T12:01:18.132+05:30  INFO 11824 --- [InsuranceManagementProject] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31T12:01:18.132+05:30  INFO 11824 --- [InsuranceManagementProject] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-31T12:01:18.134+05:30  INFO 11824 --- [InsuranceManagementProject] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-31T12:01:32.319+05:30  INFO 11824 --- [InsuranceManagementProject] [http-nio-8080-exec-1] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [AuthController#login] with args: [com.insureapp.dto.LoginRequest@60318344]
+2025-07-31T12:01:32.320+05:30  INFO 11824 --- [InsuranceManagementProject] [http-nio-8080-exec-1] c.insureapp.controller.AuthController    : Login attempt for email: admin@example.com
+2025-07-31T12:01:32.918+05:30  INFO 11824 --- [InsuranceManagementProject] [http-nio-8080-exec-1] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [AuthController#login]; execution time: 600 ms
+2025-07-31T12:03:51.831+05:30  INFO 11824 --- [InsuranceManagementProject] [http-nio-8080-exec-5] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [PolicyController#getPolicyById] with args: [1]
+2025-07-31T12:03:51.832+05:30  INFO 11824 --- [InsuranceManagementProject] [http-nio-8080-exec-5] c.i.service.impl.PolicyServiceImpl       : 🔍 Retrieving policy with ID: 1
+2025-07-31T12:03:51.873+05:30  INFO 11824 --- [InsuranceManagementProject] [http-nio-8080-exec-5] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [PolicyController#getPolicyById]; execution time: 42 ms
+2025-07-31T12:05:48.892+05:30  INFO 11824 --- [InsuranceManagementProject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-31T12:05:48.903+05:30  INFO 11824 --- [InsuranceManagementProject] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31T12:05:48.913+05:30  INFO 11824 --- [InsuranceManagementProject] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-31T12:05:48.933+05:30  INFO 11824 --- [InsuranceManagementProject] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T12:05:48.942+05:30  INFO 11824 --- [InsuranceManagementProject] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-31T12:05:48.958+05:30  INFO 11824 --- [InsuranceManagementProject] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-31T12:07:38.242+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Starting InsuranceManagementProjectApplication using Java 23.0.2 with PID 16216 (C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject\target\classes started by kompe in C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject)
+2025-07-31T12:07:38.244+05:30 DEBUG 16216 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-07-31T12:07:38.246+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-31T12:07:39.916+05:30 DEBUG 16216 --- [InsuranceManagementProject] [restartedMain] c.i.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2025-07-31T12:07:41.235+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Started InsuranceManagementProjectApplication in 3.048 seconds (process running for 96.361)
+2025-07-31T12:07:44.137+05:30  INFO 16216 --- [InsuranceManagementProject] [http-nio-8080-exec-2] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [PolicyController#getPolicyById] with args: [1]
+2025-07-31T12:07:44.141+05:30  INFO 16216 --- [InsuranceManagementProject] [http-nio-8080-exec-2] c.i.service.impl.PolicyServiceImpl       : 🔍 Retrieving policy with ID: 1
+2025-07-31T12:07:44.153+05:30 DEBUG 16216 --- [InsuranceManagementProject] [http-nio-8080-exec-2] c.i.service.impl.PolicyServiceImpl       : ✅ Found policy: com.insureapp.entity.Policy@7987f7ed
+2025-07-31T12:07:44.156+05:30  INFO 16216 --- [InsuranceManagementProject] [http-nio-8080-exec-2] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [PolicyController#getPolicyById]; execution time: 20 ms
+2025-07-31T12:26:35.582+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Starting InsuranceManagementProjectApplication using Java 23.0.2 with PID 16216 (C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject\target\classes started by kompe in C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject)
+2025-07-31T12:26:35.583+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-31T12:26:36.313+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-31T12:26:36.356+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
+2025-07-31T12:26:36.693+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-31T12:26:36.696+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-31T12:26:36.696+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-31T12:26:36.738+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-31T12:26:36.739+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1151 ms
+2025-07-31T12:26:36.980+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-31T12:26:36.985+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-31T12:26:37.003+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-31T12:26:37.005+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-07-31T12:26:37.029+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b0a2852
+2025-07-31T12:26:37.029+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-07-31T12:26:37.031+05:30  WARN 16216 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31T12:26:37.032+05:30  WARN 16216 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-31T12:26:37.032+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-31T12:26:37.187+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-31T12:26:37.224+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T12:26:37.541+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-07-31T12:26:37.542+05:30  WARN 16216 --- [InsuranceManagementProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-07-31T12:26:37.701+05:30  WARN 16216 --- [InsuranceManagementProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31T12:26:38.070+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-31T12:26:38.580+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-31T12:26:38.640+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-31T12:26:38.652+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Started InsuranceManagementProjectApplication in 3.12 seconds (process running for 1233.78)
+2025-07-31T12:26:38.656+05:30  INFO 16216 --- [InsuranceManagementProject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-31T12:41:44.599+05:30  INFO 16216 --- [InsuranceManagementProject] [RMI TCP Connection(41)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-31T12:41:44.601+05:30  INFO 16216 --- [InsuranceManagementProject] [RMI TCP Connection(41)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31T12:41:44.612+05:30  INFO 16216 --- [InsuranceManagementProject] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-31T12:41:44.618+05:30  INFO 16216 --- [InsuranceManagementProject] [RMI TCP Connection(41)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T12:41:44.618+05:30  INFO 16216 --- [InsuranceManagementProject] [RMI TCP Connection(41)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-07-31T12:41:44.632+05:30  INFO 16216 --- [InsuranceManagementProject] [RMI TCP Connection(41)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-07-31T12:42:04.154+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Starting InsuranceManagementProjectApplication using Java 23.0.2 with PID 30124 (C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject\target\classes started by kompe in C:\Users\kompe\eclipse-workspace\insurance\InsuranceManagementProject)
+2025-07-31T12:42:04.160+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-31T12:42:04.344+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-31T12:42:04.345+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-31T12:42:08.311+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-31T12:42:08.482+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 3 JPA repository interfaces.
+2025-07-31T12:42:10.136+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-31T12:42:10.165+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-31T12:42:10.166+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-31T12:42:10.263+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-31T12:42:10.263+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5916 ms
+2025-07-31T12:42:12.176+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-31T12:42:12.802+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-31T12:42:12.877+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-31T12:42:13.490+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-31T12:42:13.559+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-31T12:42:14.195+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69c48814
+2025-07-31T12:42:14.198+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-31T12:42:14.277+05:30  WARN 30124 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31T12:42:14.280+05:30  WARN 30124 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-31T12:42:14.319+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-31T12:42:16.073+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-31T12:42:16.205+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-31T12:42:17.026+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-07-31T12:42:17.027+05:30  WARN 30124 --- [InsuranceManagementProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-07-31T12:42:17.407+05:30  WARN 30124 --- [InsuranceManagementProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31T12:42:18.174+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-31T12:42:18.942+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-31T12:42:19.115+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-31T12:42:19.136+05:30  INFO 30124 --- [InsuranceManagementProject] [restartedMain] .i.InsuranceManagementProjectApplication : Started InsuranceManagementProjectApplication in 16.395 seconds (process running for 18.222)
+2025-07-31T12:42:19.614+05:30  INFO 30124 --- [InsuranceManagementProject] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31T12:42:19.614+05:30  INFO 30124 --- [InsuranceManagementProject] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-31T12:42:19.616+05:30  INFO 30124 --- [InsuranceManagementProject] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-31T12:44:29.044+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 706 ms
+2025-07-31T12:49:09.434+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-4] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [PolicyController#getPolicyById] with args: [1]
+2025-07-31T12:49:09.435+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-4] c.i.service.impl.PolicyServiceImpl       : 🔍 Retrieving policy with ID: 1
+2025-07-31T12:49:09.480+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-4] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [PolicyController#getPolicyById]; execution time: 46 ms
+2025-07-31T12:50:35.208+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-8] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [PolicyController#getPolicyById] with args: [1]
+2025-07-31T12:50:35.208+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-8] c.i.service.impl.PolicyServiceImpl       : 🔍 Retrieving policy with ID: 1
+2025-07-31T12:50:35.214+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-8] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [PolicyController#getPolicyById]; execution time: 6 ms
+2025-07-31T12:58:00.268+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-1] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [PolicyController#getPolicyById] with args: [1]
+2025-07-31T12:58:00.268+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-1] c.i.service.impl.PolicyServiceImpl       : 🔍 Retrieving policy with ID: 1
+2025-07-31T12:58:00.274+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-1] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [PolicyController#getPolicyById]; execution time: 6 ms
+2025-07-31T12:58:01.408+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-2] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [PolicyController#getPolicyById] with args: [1]
+2025-07-31T12:58:01.408+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-2] c.i.service.impl.PolicyServiceImpl       : 🔍 Retrieving policy with ID: 1
+2025-07-31T12:58:01.414+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-2] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [PolicyController#getPolicyById]; execution time: 6 ms
+2025-07-31T12:58:02.439+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-3] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [PolicyController#getPolicyById] with args: [1]
+2025-07-31T12:58:02.439+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-3] c.i.service.impl.PolicyServiceImpl       : 🔍 Retrieving policy with ID: 1
+2025-07-31T12:58:02.445+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-3] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [PolicyController#getPolicyById]; execution time: 6 ms
+2025-07-31T12:58:04.424+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-6] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [PolicyController#getPolicyById] with args: [1]
+2025-07-31T12:58:04.425+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-6] c.i.service.impl.PolicyServiceImpl       : 🔍 Retrieving policy with ID: 1
+2025-07-31T12:58:04.430+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-6] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [PolicyController#getPolicyById]; execution time: 6 ms
+2025-07-31T13:00:43.748+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-7] com.insureapp.aspect.LoggingAspect       : ➡️ Entering [AuthController#login] with args: [com.insureapp.dto.LoginRequest@3b9be193]
+2025-07-31T13:00:43.749+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-7] c.insureapp.controller.AuthController    : Login attempt for email: admin@example.com
+2025-07-31T13:00:43.921+05:30  INFO 30124 --- [InsuranceManagementProject] [http-nio-8080-exec-7] com.insureapp.aspect.LoggingAspect       : ⬅️ Exiting [AuthController#login]; execution time: 173 ms
